@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo Camera View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="PhotoCameraViewController" id="BYZ-38-t0r" customClass="PhotoCameraViewController" customModule="LiveCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7ag-Cb-Osb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WHm-dk-WxX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0g-JQ-oDB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="As4-Or-tZM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RWy-eP-5CB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIs-8k-Lo9">
+                                <rect key="frame" x="175" y="664" width="64" height="64"/>
+                                <state key="normal" image="camera-button"/>
+                                <state key="selected" image="camera-retake"/>
+                                <connections>
+                                    <action selector="cameraButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="C4B-wc-1Z0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="As4-Or-tZM" firstAttribute="width" secondItem="7ag-Cb-Osb" secondAttribute="width" id="BQK-mE-xwu"/>
+                            <constraint firstItem="WHm-dk-WxX" firstAttribute="centerX" secondItem="7ag-Cb-Osb" secondAttribute="centerX" id="I9e-AE-asK"/>
+                            <constraint firstItem="WHm-dk-WxX" firstAttribute="centerY" secondItem="7ag-Cb-Osb" secondAttribute="centerY" id="JA5-Ds-R2N"/>
+                            <constraint firstItem="WHm-dk-WxX" firstAttribute="height" secondItem="7ag-Cb-Osb" secondAttribute="height" id="LI7-ts-T4j"/>
+                            <constraint firstItem="RWy-eP-5CB" firstAttribute="centerY" secondItem="7ag-Cb-Osb" secondAttribute="centerY" id="ORa-Be-sjW"/>
+                            <constraint firstItem="RWy-eP-5CB" firstAttribute="centerX" secondItem="7ag-Cb-Osb" secondAttribute="centerX" id="Sh6-W7-phT"/>
+                            <constraint firstItem="f0g-JQ-oDB" firstAttribute="height" secondItem="7ag-Cb-Osb" secondAttribute="height" id="aAN-5C-bJA"/>
+                            <constraint firstItem="f0g-JQ-oDB" firstAttribute="centerY" secondItem="7ag-Cb-Osb" secondAttribute="centerY" id="fu1-fz-blW"/>
+                            <constraint firstItem="As4-Or-tZM" firstAttribute="centerY" secondItem="7ag-Cb-Osb" secondAttribute="centerY" id="gK9-mR-Fd2"/>
+                            <constraint firstItem="f0g-JQ-oDB" firstAttribute="centerX" secondItem="7ag-Cb-Osb" secondAttribute="centerX" id="goO-Xf-oo5"/>
+                            <constraint firstItem="f0g-JQ-oDB" firstAttribute="width" secondItem="7ag-Cb-Osb" secondAttribute="width" id="iV7-Xa-StC"/>
+                            <constraint firstItem="RWy-eP-5CB" firstAttribute="height" secondItem="7ag-Cb-Osb" secondAttribute="height" id="jFE-NN-lRL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JIs-8k-Lo9" secondAttribute="bottom" constant="8" id="kgj-Yr-lLJ"/>
+                            <constraint firstItem="JIs-8k-Lo9" firstAttribute="centerX" secondItem="7ag-Cb-Osb" secondAttribute="centerX" id="pVL-RN-eEI"/>
+                            <constraint firstItem="As4-Or-tZM" firstAttribute="centerX" secondItem="7ag-Cb-Osb" secondAttribute="centerX" id="q4i-KR-ZnD"/>
+                            <constraint firstItem="RWy-eP-5CB" firstAttribute="width" secondItem="7ag-Cb-Osb" secondAttribute="width" id="qVt-qA-yq0"/>
+                            <constraint firstItem="As4-Or-tZM" firstAttribute="height" secondItem="7ag-Cb-Osb" secondAttribute="height" id="vWF-Ng-dAg"/>
+                            <constraint firstItem="WHm-dk-WxX" firstAttribute="width" secondItem="7ag-Cb-Osb" secondAttribute="width" id="xLw-b1-AHn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backdropView" destination="WHm-dk-WxX" id="P28-fx-s76"/>
+                        <outlet property="cameraButton" destination="JIs-8k-Lo9" id="VZh-VC-EnA"/>
+                        <outlet property="finalOverlayView" destination="RWy-eP-5CB" id="xRe-qk-D4E"/>
+                        <outlet property="overlayView" destination="As4-Or-tZM" id="MLg-kw-fXV"/>
+                        <outlet property="previewView" destination="f0g-JQ-oDB" id="Vll-8x-m2S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-799" y="120"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera-button" width="64" height="64"/>
+        <image name="camera-retake" width="64" height="64"/>
+    </resources>
+</document>
