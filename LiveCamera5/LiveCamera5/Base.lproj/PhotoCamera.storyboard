@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Photo Camera View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="PhotoCameraViewController" id="BYZ-38-t0r" customClass="PhotoCameraViewController" customModule="LiveCamera" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhotoCameraViewController" id="BYZ-38-t0r" customClass="PhotoCameraViewController" customModule="LiveCamera5" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -37,6 +36,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device Required" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcY-BR-h5F">
+                                <rect key="frame" x="89" y="349" width="236" height="38"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIs-8k-Lo9">
                                 <rect key="frame" x="175" y="664" width="64" height="64"/>
                                 <state key="normal" image="camera-button"/>
@@ -48,6 +53,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="fcY-BR-h5F" firstAttribute="centerY" secondItem="7ag-Cb-Osb" secondAttribute="centerY" id="0x1-Rq-F41"/>
                             <constraint firstItem="As4-Or-tZM" firstAttribute="width" secondItem="7ag-Cb-Osb" secondAttribute="width" id="BQK-mE-xwu"/>
                             <constraint firstItem="WHm-dk-WxX" firstAttribute="centerX" secondItem="7ag-Cb-Osb" secondAttribute="centerX" id="I9e-AE-asK"/>
                             <constraint firstItem="WHm-dk-WxX" firstAttribute="centerY" secondItem="7ag-Cb-Osb" secondAttribute="centerY" id="JA5-Ds-R2N"/>
@@ -65,12 +71,14 @@
                             <constraint firstItem="As4-Or-tZM" firstAttribute="centerX" secondItem="7ag-Cb-Osb" secondAttribute="centerX" id="q4i-KR-ZnD"/>
                             <constraint firstItem="RWy-eP-5CB" firstAttribute="width" secondItem="7ag-Cb-Osb" secondAttribute="width" id="qVt-qA-yq0"/>
                             <constraint firstItem="As4-Or-tZM" firstAttribute="height" secondItem="7ag-Cb-Osb" secondAttribute="height" id="vWF-Ng-dAg"/>
+                            <constraint firstItem="fcY-BR-h5F" firstAttribute="centerX" secondItem="7ag-Cb-Osb" secondAttribute="centerX" id="x40-td-X3o"/>
                             <constraint firstItem="WHm-dk-WxX" firstAttribute="width" secondItem="7ag-Cb-Osb" secondAttribute="width" id="xLw-b1-AHn"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backdropView" destination="WHm-dk-WxX" id="P28-fx-s76"/>
                         <outlet property="cameraButton" destination="JIs-8k-Lo9" id="VZh-VC-EnA"/>
+                        <outlet property="deviceLabel" destination="fcY-BR-h5F" id="8kd-FL-fO1"/>
                         <outlet property="finalOverlayView" destination="RWy-eP-5CB" id="xRe-qk-D4E"/>
                         <outlet property="overlayView" destination="As4-Or-tZM" id="MLg-kw-fXV"/>
                         <outlet property="previewView" destination="f0g-JQ-oDB" id="Vll-8x-m2S"/>

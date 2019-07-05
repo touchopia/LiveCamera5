@@ -28,6 +28,8 @@ class PhotoCameraViewController: UIViewController {
     @IBOutlet weak var backdropView: UIView!
     @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var finalOverlayView: UIView!
+    @IBOutlet weak var deviceLabel: UILabel!
+    
     
     //MARK: -
     //MARK:
@@ -136,7 +138,13 @@ class PhotoCameraViewController: UIViewController {
     }
     
     @objc func addCaptureLayer(position: AVCaptureDevice.Position) {
-        
+
+        #if targetEnvironment(simulator)
+            deviceLabel.isHidden = false
+            return
+        #else
+
+        deviceLabel.isHidden = true
         captureSession.sessionPreset = AVCaptureSession.Preset.photo
         cameraDevice = self.getDevice(position: position)
         
@@ -170,6 +178,7 @@ class PhotoCameraViewController: UIViewController {
                 captureSession.startRunning()
             }
         }
+        #endif
     }
     
     @objc func pinch(sender: UIPinchGestureRecognizer) {
