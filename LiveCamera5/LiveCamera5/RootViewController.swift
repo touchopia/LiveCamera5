@@ -16,8 +16,8 @@ class RootViewController: UIViewController {
         super.viewDidLoad()
         
         let controller = PhotoCameraViewController.createStoryboard()
-        self.present(controller, animated: false, completion: nil)
-        self.photoController = controller
+        present(controller, animated: false, completion: nil)
+        photoController = controller
     }
 
 }
