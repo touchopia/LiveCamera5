@@ -10,14 +10,17 @@ import UIKit
 
 class RootViewController: UIViewController {
 
-    var photoController: PhotoCameraViewController?
+    var photoController: PhotoCameraViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let controller = PhotoCameraViewController.createStoryboard()
-        present(controller, animated: false, completion: nil)
-        photoController = controller
+        photoController = PhotoCameraViewController.createStoryboard()
     }
 
+    
+    @IBAction func cameraTapped(_ sender: UIButton) {
+        present(photoController, animated: false, completion: nil)
+    }
+    
 }

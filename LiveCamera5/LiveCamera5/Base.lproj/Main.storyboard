@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kar-JO-VbT">
-    <device id="retina5_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kar-JO-VbT">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
         <scene sceneID="2qW-DC-qsV">
             <objects>
-                <viewController id="Weg-yV-aER" customClass="RootViewController" customModule="LiveCamera" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Weg-yV-aER" customClass="RootViewController" customModule="LiveCamera5" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="shE-LX-1Xk"/>
                         <viewControllerLayoutGuide type="bottom" id="A1Y-5e-DQf"/>
@@ -20,14 +17,35 @@
                     <view key="view" contentMode="scaleToFill" id="A7e-5y-CFx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5z-af-BLs">
+                                <rect key="frame" x="145" y="350.66666666666669" width="124" height="35"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="lh6-xC-PEU"/>
+                                    <constraint firstAttribute="height" constant="35" id="y1X-WT-pWA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <state key="normal" title="Press Me">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cameraTapped:" destination="Weg-yV-aER" eventType="touchUpInside" id="zAR-Cb-ahe"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H5z-af-BLs" firstAttribute="centerX" secondItem="A7e-5y-CFx" secondAttribute="centerX" id="EgH-kg-ObD"/>
+                            <constraint firstItem="H5z-af-BLs" firstAttribute="centerY" secondItem="A7e-5y-CFx" secondAttribute="centerY" id="UZG-zY-dAd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nvJ-Yg-Qo1"/>
                     <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="STh-0P-1j1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="225" y="-11"/>
+            <point key="canvasLocation" x="121.73913043478262" y="-106.79347826086958"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="D1B-nm-nb7">
@@ -35,7 +53,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kar-JO-VbT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2c6-2w-gNf">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -45,7 +63,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oxh-6G-ga1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-629" y="-24"/>
+            <point key="canvasLocation" x="-706" y="-106"/>
         </scene>
     </scenes>
 </document>
