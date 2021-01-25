@@ -183,7 +183,7 @@ class PhotoCameraViewController: UIViewController {
     
     @objc func pinch(sender: UIPinchGestureRecognizer) {
         
-        var zoomFactor = sender.scale * prevZoomFactor
+        let zoomFactor = sender.scale * prevZoomFactor
         
         if sender.state == .ended {
             prevZoomFactor = zoomFactor >= 1 ? zoomFactor : 1
@@ -269,8 +269,12 @@ class PhotoCameraViewController: UIViewController {
     
     private func getDevice(position: AVCaptureDevice.Position) -> AVCaptureDevice? {
         var capturedDevice: AVCaptureDevice?
-        
-        for device in AVCaptureDevice.devices() {
+
+        let session = AVCaptureDevice.DiscoverySession.init(deviceTypes: [.builtInWideAngleCamera],
+                                                            mediaType: .video,
+                                                            position: .unspecified)
+
+        for device in session.devices {
             if(device.position == position) {
                 capturedDevice = device
             }
